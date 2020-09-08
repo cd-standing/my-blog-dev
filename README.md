@@ -126,14 +126,20 @@ Open a new terminal and navigate to 'my-blog'
 
 #### To get the app ready for deployment:
 
+Note: Some of these changes may have already been made to this code but 
+these additions are useful to know for future development and deployment.
+
+If you notice the changes already exist in the files just run npm build
+as specified below.
+
 Change 'title' in index.html to relate to the app. Call it 'My Blog'.
 
-Edit manifest.json and change 'short_name' and 'name' to more relevant names
+Edite manifest.json and change 'short_name' and 'name' to more relevant names
 
 	My Blog
 	My Blog  - A Blog About All Things Programming
 
-in the 'my-blog' folder run
+To build for deployment in the 'my-blog' folder run
 
 	npm build
 	
@@ -141,12 +147,12 @@ This will create a 'build' folder containing the code ready for deployment.
 
 Copy the 'build' folder to 'my-blog-backend/src'.
 
-Because the build folder is now inside 'my-blog-backend/src' some files need 
+Because the build folder is now inside 'my-blog-backend/src' some files needed 
 to be modified to allow both the backend and frontend to be served from here.
 
 Edit 'server.js':
 
-Add at the top
+Added at the top
 
 	import path from 'path';
 
