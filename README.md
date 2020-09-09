@@ -16,15 +16,27 @@ Please read these comments to get an understanding of some of the concepts of Re
 - **Powershell** as admin for Windows to run commands (pre-installed in Windows)
 - **Microsoft Visual Studio Code** as IDE https://code.visualstudio.com/download
 
+#### Installing NodeJs
+
 Node JS is required for this app to work. If you don't already have this on your machine it can be downloaded and installed from:
 
 https://nodejs.org/en/download/
 
-Once downloaded add the nodejs source directory to 'path' as an environment variable in windows. For example this is 'C:\Program Files\nodejs' on my machine. Depending on your install choices this may be somewhere else.
+Once downloaded add the nodejs source directory as an environment variable in Windows. For example this is 'C:\Program Files\nodejs' on my machine. Depending on your install choices this may be somewhere else.
+
+You can add this to the path by typing 'env' into your windows search bar, opening up 'Edit the system environment variables' > 'Environment Variables' > select 'Path' under 'System variables' >  select 'Edit' > 'New' > Copy and paste the path 'C:\Program Files\nodejs' for the executable here .
 
 #### Check this is on the path by typing
 
     node -v
+    
+#### Installing Git
+
+You will need to install Git to clone a local repository and manage your source code.
+
+This can be downloaded from https://git-scm.com/download/win.
+
+Git should be added to your system path automatically but if it isn't, follow the instruction for adding the executable folder to the path from the NodeJS example above.
 
 ## Instructions for cloning locally
 
