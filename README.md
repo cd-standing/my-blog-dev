@@ -28,7 +28,7 @@ Once downloaded add this to 'path' as an environment variable in windows.
 
 ## Instructions for cloning locally
 
-In Powershell navigate to local folder
+Using Powershell navigate to local folder
 
     cd C:\users\[username]\dev
     
