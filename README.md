@@ -16,7 +16,7 @@ Please read these comments to get an understanding of some of the concepts of Re
 - **Powershell** as admin for Windows to run commands (pre-installed in Windows)
 - **Microsoft Visual Studio Code** as IDE https://code.visualstudio.com/download
 
-Node JS is required for this app to work. If you don't already have this ni your machine it can be downloaded and installed from:
+Node JS is required for this app to work. If you don't already have this on your machine it can be downloaded and installed from:
 
 https://nodejs.org/en/download/
 
