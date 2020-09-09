@@ -20,7 +20,7 @@ Node JS is required for this app to work. If you don't already have this on your
 
 https://nodejs.org/en/download/
 
-Once downloaded add the nodejs source directory to 'path' as an environment variable in windows. For example this is 'C:\Program Files\nodejs' on my machine.
+Once downloaded add the nodejs source directory to 'path' as an environment variable in windows. For example this is 'C:\Program Files\nodejs' on my machine. Depending on your install choices this may be somewhere else.
 
 #### Check this is on the path by typing
 
