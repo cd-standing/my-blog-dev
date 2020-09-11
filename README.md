@@ -160,14 +160,15 @@ clone this code again for development.
 
 ### Push development code to a GitHub respository
 
+Navigate to the 'my-blog-dev' folder which contains both the 'my-blog' and 'my-blog-backend' folders.
+
 Initialise the folder for GitHub
 
 	git init
 	
-Create a '.gitignore' folder in 'my-blog-backend' and in the file add
+Create a '.gitignore' folder in 'my-blog-dev' and in this file add
 
 	node_modules
-
 
 Add the files to be committed
 
@@ -183,13 +184,15 @@ Commit the files using
 	
 Create a github repo on your personal GitHub called 'my-blog-dev' 
 (follow instructions on GitHub to do this) and copy the Git URL
-for example 'https://github.com/cd-standing/my-blog.git'
+for example 'https://github.com/cd-standing/my-blog-dev.git'
 
 Push the local files to the repository (it may ask to add email details for 
 a first commit and push, add these as suggested in the terminal and commit again 
 if necessary.
 
-	git remote add origin https://github.com/cd-standing/my-blog.git
+	git remote add origin https://github.com/[YOUR REPO USERNAME]/my-blog-dev.git
+
+then
 	
 	git push -u origin master
 	
@@ -247,7 +250,46 @@ caught by any other API routes in the code should be passed on to the app).
 		res.sendFile(path.join(__dirname + '/build/index.html'));
 	})
 	
-#### Once built push this to GitHub as above but call the repo 'my-blog' instead of 'my-blog-dev'.
+#### Once built follow the instructions below to push this to a separate repo in GitHub so this can be cloned on the live server.
+
+Navigate to the 'my-blog-backend' folder which contains a src folder which will contain the build folder next to the backend 'server.js' code.
+
+Initialise the folder for GitHub
+
+	git init
+	
+Create a '.gitignore' folder in 'my-blog-backend' and in the file add
+
+	node_modules
+
+
+Add the files to be committed
+
+	git add .
+	
+Check the status of the files using
+
+	git status
+	
+Commit the files using
+
+	git commit -m "Initial commit"
+	
+Create a github repo on your personal GitHub called 'my-blog' 
+(follow instructions on GitHub to do this) and copy the Git URL
+for example 'https://github.com/cd-standing/my-blog.git'
+
+Push the local files to the repository (it may ask to add email details for 
+a first commit and push, add these as suggested in the terminal and commit again 
+if necessary.
+
+	git remote add origin https://github.com/[YOUR REPO USERNAME]/my-blog.git
+
+then
+	
+	git push -u origin master
+	
+The files should now appear in GitHub.
 
 ---------------------------
 
