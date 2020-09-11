@@ -136,13 +136,20 @@ This enables us to simply use
 
 	  npm start
 	
-To serve the front end
+To serve the front end (the structure for this has been set up by using the 'create-react-app' command initially)
 
 Open a new terminal and navigate to 'my-blog'
 
 	  npm start
+	  
+**The app now has everything running and in place to function as expected**
+
+- The database should be running in the background and have some dummy data inserted as JSON
+- The server.js code in 'my-blog-backend' is dealing with communicatoin with the server and the 
+frontend code using 'express', 'body-parser' and the 'mongoClient' modules.
 
 ----------------------------
+
 
 #### To get the app ready for deployment:
 
