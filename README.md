@@ -455,5 +455,8 @@ App is now accessible publicly in the broswer!
 
 The end.
 
+
+### Important note! If you don't want to get charged by AWS after the free tier service runs out you should terminate your EC2 instance when you've finished with it. You can do this by selecting it then selecting 'terminate' from the dropdown. 
+
 -----------------------------------------
 
