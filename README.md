@@ -48,11 +48,19 @@ then type
 
     git clone https://github.com/cd-standing/my-blog.git
 
-This will create a 'my-blog' repo.
+This will create a 'my-blog-dev' repo.
 
-To install all the node modules for the app, navigate to
+To install all the node modules for the frontend part of the app, navigate to
 
 	  cd my-blog
+    
+then type
+	
+	  npm install
+	  
+To install all the node modules for the backend part of the app, navigate to
+
+	  cd my-blog-backend
     
 then type
 	
