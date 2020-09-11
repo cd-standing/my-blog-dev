@@ -1,6 +1,17 @@
 # my-blog-dev
 React app with source React code to develop locally before building for deployment
 
+If you follow the instructions below exactly, step by step you will end up with a fully 
+functional React app deloyed on an AWS instance that you can access publicly. This is
+a simple app that acts as a blog with some simple functionality such as page navigation,
+adding comments and adding votes to an item.
+
+You will end up with a development repository on GitHub and a repository on GitHub containing the built code
+ready for deployment.
+
+The development code should give you room to experiment with creating new components
+and to modify the app to add more functionality.
+
 ## The full stack for this React app includes:
 
 - Front end 'app' code contained in 'my-blog/src'. This contains all the components for the front end.
