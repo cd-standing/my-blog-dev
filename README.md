@@ -149,7 +149,7 @@ Open a new terminal and navigate to 'my-blog'
 frontend code using 'express', 'body-parser' and the 'mongoClient' modules.
 - The frontend should be interactive. You should be able to add comments, upvote and navigate easily between pages.
 
-## Try creating new components and pages for the frontend and functions to GET or POST to these in the server.js code!
+#### Try creating new components and pages for the frontend and functions to GET or POST to these in the server.js code!
 
 ----------------------------
 
