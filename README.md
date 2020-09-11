@@ -144,9 +144,12 @@ Open a new terminal and navigate to 'my-blog'
 	  
 **The app now has everything running and in place to function as expected**
 
-- The database should be running in the background and have some dummy data inserted as JSON
+- The database should be running in the background and have some dummy data inserted as JSON.
 - The server.js code in 'my-blog-backend' is dealing with communicatoin with the server and the 
 frontend code using 'express', 'body-parser' and the 'mongoClient' modules.
+- The frontend should be interactive. You should be able to add comments, upvote and navigate easily between pages.
+
+## Try creating new components and pages for the frontend and functions to GET or POST to these in the server.js code!
 
 ----------------------------
 
