@@ -87,7 +87,7 @@ In VS Code you can then select Terminal > New terminal to start running commands
 
 #### Start database
 
-	mongodb
+	mongod
 	
 #### Open database terminal
 
