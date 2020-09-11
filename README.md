@@ -152,54 +152,13 @@ frontend code using 'express', 'body-parser' and the 'mongoClient' modules.
 #### Try creating new components and pages for the frontend and functions to GET or POST to these in the server.js code!
 
 ----------------------------
+## Deployment
 
+Once you're done with local development and you're happy that everything works
+as expected you can first make a development repo for this in GitHub so you can
+clone this code again for development.
 
-#### To get the app ready for deployment:
-
-Note: Some of these changes may have already been made to this code but 
-these additions are useful to know for future development and deployment.
-
-If you notice the changes already exist in the files just run npm build
-as specified below.
-
-Change 'title' in index.html to relate to the app. Call it 'My Blog'.
-
-Edite manifest.json and change 'short_name' and 'name' to more relevant names
-
-	My Blog
-	My Blog  - A Blog About All Things Programming
-
-To build for deployment in the 'my-blog' folder run
-
-	npm build
-	
-This will create a 'build' folder containing the code ready for deployment.
-
-Copy the 'build' folder to 'my-blog-backend/src'.
-
-Because the build folder is now inside 'my-blog-backend/src' some files needed 
-to be modified to allow both the backend and frontend to be served from here.
-
-Edit 'server.js':
-
-Added at the top
-
-	import path from 'path';
-
-Add just above the first 'app.use...'
-
-	app.use(express.static(path.join(__dirname, '/build')));
-	
-Add at the bottom, just before 'app.listen...' (this tells all requests that aren't 
-caught by any other API routes in the code should be passed on to the app).
-
-	app.get('*', (req, res) => {
-		res.sendFile(path.join(__dirname + '/build/index.html'));
-	})
-
----------------------------
-
-### Push to a GitHub respository
+### Push development code to a GitHub respository
 
 Initialise the folder for GitHub
 
@@ -222,7 +181,7 @@ Commit the files using
 
 	git commit -m "Initial commit"
 	
-Create a github repo on your personal GitHub called 'my-blog' 
+Create a github repo on your personal GitHub called 'my-blog-dev' 
 (follow instructions on GitHub to do this) and copy the Git URL
 for example 'https://github.com/cd-standing/my-blog.git'
 
@@ -237,6 +196,61 @@ if necessary.
 The files should now appear in GitHub.
 
 --------------------------------------
+
+
+#### To get the app ready for deployment:
+
+Note: This will create a built version of your code to optimise
+it for the browser. The code will be transpiled and you won't have
+access to the source code once it's built. 
+
+Some of these changes I will mention below may have already been made to this code but 
+these additions are useful to know for future development and deployment.
+
+If you notice the changes already exist in the files just run npm build
+as specified below.
+
+Change 'title' in index.html to relate to the app. Call it 'My Blog'.
+
+Edit manifest.json and change 'short_name' and 'name' to more relevant names
+
+For example:
+
+	My Blog
+	My Blog  - A Blog About All Things Programming
+
+To build for deployment in the 'my-blog' folder run
+
+	npm build
+	
+This will create a 'build' folder containing the code ready for deployment.
+
+Copy the 'build' folder to 'my-blog-backend/src'.
+
+Because the build folder is now inside 'my-blog-backend/src' some files needed 
+to be modified to allow both the backend and frontend to be served from one location.
+
+Edit 'server.js':
+
+Added at the top
+
+	import path from 'path';
+
+Add just above the first 'app.use...'
+
+	app.use(express.static(path.join(__dirname, '/build')));
+	
+Add at the bottom, just before 'app.listen...' (this tells all requests that aren't 
+caught by any other API routes in the code should be passed on to the app).
+
+	app.get('*', (req, res) => {
+		res.sendFile(path.join(__dirname + '/build/index.html'));
+	})
+	
+#### Once built push this to GitHub as above but call the repo 'my-blog' instead of 'my-blog-dev'.
+
+---------------------------
+
 
 ### Set up an AWS account and AWS EC2 instance
 
@@ -345,7 +359,7 @@ If successful this will show that 3 records are successfully inserted.
 
 ### Run the app on AWS
 
-Clone the app repository to the EC2 instance
+Clone the repository for the built version of the app to the EC2 instance
 
 	git clone https://github.com/cd-standing/my-blog.git
 
